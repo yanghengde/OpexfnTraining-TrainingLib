@@ -1,0 +1,104 @@
+VERSION '01.13'
+
+[Protected]
+[@Guid(e0353dd7-09ff-4a8d-b942-a1c6af1bfdef)]
+COMMAND CreateTeam
+WITH
+    [@GuidRef(235e63ba-50fe-4e3e-930c-b2bad6d45568, b89f9eee-532b-4514-b076-0e8356f1ef13)]
+    Team AS Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Types.TeamType
+    IsActive AS bool
+RESPONSE
+    [Optional]
+    Id AS Guid
+
+[Protected]
+[@Guid(736fc372-4128-42d2-abc2-1eb91166695b)]
+COMMAND UpdateTeam
+WITH
+    [@GuidRef(235e63ba-50fe-4e3e-930c-b2bad6d45568, b89f9eee-532b-4514-b076-0e8356f1ef13)]
+    Team AS Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Types.TeamType
+    IsActive AS bool
+    Id AS Guid
+
+[Protected]
+[@Guid(c808a573-f5ee-4037-9e55-302213dce536)]
+COMMAND DeleteTeam
+WITH
+    Id AS Guid
+
+[Protected]
+[@AddedOnMinorVersion=01.02.00]
+[@Guid(38b93248-ff3d-4fb8-9dcf-bd876af34f5d)]
+COMMAND AssignPersonToTeam
+WITH
+    [@AddedOnMinorVersion=01.02.00]
+    [@GuidRef(235e63ba-50fe-4e3e-930c-b2bad6d45568, 12c275ce-e131-412a-860b-5b58648af081)]
+    Persons AS list of Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel.Person.Name
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    TeamName AS string
+
+[Protected]
+[@AddedOnMinorVersion=01.02.00]
+[@Guid(967d00ff-1bc5-4cd0-a9f0-bfc0410876a4)]
+COMMAND AssignTeamToGroup
+WITH
+    [@AddedOnMinorVersion=01.02.00]
+    [@GuidRef(235e63ba-50fe-4e3e-930c-b2bad6d45568, 3da0d78e-f2af-4af9-ab21-13afe0d7f325)]
+    Teams AS list of Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel.Team.Name
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    GroupName AS string
+
+[Protected]
+[@AddedOnMinorVersion=01.02.00]
+[@Guid(033d01bd-a0af-4173-8ab7-18ec05b9c86c)]
+COMMAND CreatePerson
+WITH
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    Name AS string
+RESPONSE
+    [Optional]
+    [@AddedOnMinorVersion=01.02.00]
+    Id AS Guid
+
+[Protected]
+[@AddedOnMinorVersion=01.02.00]
+[@Guid(2d30fff1-5c7f-4f72-a56e-74a2ae9bed88)]
+COMMAND CreateGroup
+WITH
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    Name AS string
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    Description AS string
+RESPONSE
+    [Optional]
+    [@AddedOnMinorVersion=01.02.00]
+    Id AS Guid
+
+[Protected]
+[@AddedOnMinorVersion=01.02.00]
+[@Guid(a26ba61d-4176-425c-ac64-360800549c7f)]
+COMMAND RemovePersonFromTeam
+WITH
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    PersonName AS string
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    TeamName AS string
+
+[Protected]
+[@AddedOnMinorVersion=01.02.00]
+[@Guid(a208e4af-9475-4492-b21b-9a84784b3feb)]
+COMMAND RemoveTeamFromGroup
+WITH
+    [@AddedOnMinorVersion=01.02.00]
+    TeamName AS list of string
+    [Length = 255]
+    [@AddedOnMinorVersion=01.02.00]
+    GroupName AS string
+

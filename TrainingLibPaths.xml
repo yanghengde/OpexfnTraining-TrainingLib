@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<projects>
+  <project>
+    <type>CommandHandler</type>
+    <path>C:\Projects\TrainingLib\TrainingLib\TrainingLib.CommandHandler\bin\Debug\</path>
+  </project>
+  <project>
+    <type>EventHandler</type>
+    <path>C:\Projects\TrainingLib\TrainingLib\TrainingLib.EventHandler\bin\Debug\</path>
+  </project>
+  <project>
+    <type>Model</type>
+    <path>C:\Projects\TrainingLib\TrainingLib\TrainingLib.MSModel\bin\</path>
+  </project>
+  <project>
+    <type>Installer</type>
+    <path>C:\Projects\TrainingLib\TrainingLib\TrainingLib.Installer\bin\Debug\</path>
+  </project>
+</projects>

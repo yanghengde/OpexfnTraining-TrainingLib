@@ -1,0 +1,58 @@
+VERSION '01.13'
+
+[Securable]
+[@Guid(b206a07f-4182-4b9a-b64e-18ccf4bd3a13)]
+[@GuidId(2a5484cc-4284-4f83-9f72-b7b4c44a7bf5)]
+ENTITY Team
+WITH
+    ///Team Name
+    [Length = 255]
+    [@Guid(3da0d78e-f2af-4af9-ab21-13afe0d7f325)]
+    Name AS string
+    ///Team Description
+    [Length = 255]
+    [@Guid(79f8ee9a-517d-444e-a302-45ee0467b85d)]
+    Description AS string
+    ///The number of Team
+    [@Guid(00f2ca0d-bf6e-4fc1-a711-3d868cc46768)]
+    Number AS int
+    ///是否激活
+    [@Guid(528f87df-19d6-4f72-ad99-8e4acc30a96f)]
+    IsActive AS bool
+
+[Securable]
+[@AddedOnMinorVersion=01.01.00]
+[@Guid(2afba596-4865-4a06-bae5-644f9687bc59)]
+[@GuidId(caaef442-3050-435a-89e0-6dbb745cfc19)]
+ENTITY TeamGroup
+WITH
+    [Length = 255]
+    [@AddedOnMinorVersion=01.01.00]
+    [@Guid(47852f53-1d7f-4555-a19c-98ddb2a9e7c7)]
+    Name AS string
+    [Length = 255]
+    [@AddedOnMinorVersion=01.01.00]
+    [@Guid(4d52c0cc-3d40-4e00-be6d-09306c729217)]
+    Description AS string
+    [ManyToMany BackNavigation = Team.GroupT OnDeleteCascade Simple]
+    [@AddedOnMinorVersion=01.01.00]
+    [@Guid(c3a39540-2458-47cb-8d21-504cfb4b1a92)]
+    [@GuidRef(235e63ba-50fe-4e3e-930c-b2bad6d45568, b206a07f-4182-4b9a-b64e-18ccf4bd3a13)]
+    Team AS list of Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel.Team
+
+[Securable]
+[@AddedOnMinorVersion=01.01.00]
+[@Guid(7ebac0e9-cfca-4639-8890-3bd9ebabd773)]
+[@GuidId(d09ce2ad-08e4-4569-a0c2-f0d0379a4498)]
+ENTITY Person
+WITH
+    [Length = 255]
+    [@AddedOnMinorVersion=01.01.00]
+    [@Guid(12c275ce-e131-412a-860b-5b58648af081)]
+    Name AS string
+    [OneToMany BackNavigation = Team.Person OnDeleteCascade Simple]
+    [@AddedOnMinorVersion=01.01.00]
+    [@Guid(b1e334a1-0dcb-4df8-8ec6-7ca2c3da187d)]
+    [@GuidRef(235e63ba-50fe-4e3e-930c-b2bad6d45568, b206a07f-4182-4b9a-b64e-18ccf4bd3a13)]
+    Team AS Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel.Team
+
