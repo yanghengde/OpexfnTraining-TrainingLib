@@ -5,8 +5,8 @@
     <FileName>TrainingLib.MSModel</FileName>
     <Artifacts>
       <ArtifactSuo>
-        <X>510</X>
-        <Y>305</Y>
+        <X>507</X>
+        <Y>271</Y>
         <FullName>Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel.Team</FullName>
         <IsExpandedA>true</IsExpandedA>
         <IsExpandedB>true</IsExpandedB>
@@ -45,7 +45,7 @@
         <IsExpandedC>false</IsExpandedC>
       </ArtifactSuo>
       <ArtifactSuo>
-        <X>710</X>
+        <X>711</X>
         <Y>311</Y>
         <FullName>Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel.TeamGroup</FullName>
         <IsExpandedA>true</IsExpandedA>
@@ -61,8 +61,8 @@
         <IsExpandedC>false</IsExpandedC>
       </ArtifactSuo>
       <ArtifactSuo>
-        <X>106</X>
-        <Y>28</Y>
+        <X>38</X>
+        <Y>18</Y>
         <FullName>Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Commands.AssignPersonToTeam</FullName>
         <IsExpandedA>true</IsExpandedA>
         <IsExpandedB>false</IsExpandedB>
@@ -93,16 +93,16 @@
         <IsExpandedC>false</IsExpandedC>
       </ArtifactSuo>
       <ArtifactSuo>
-        <X>149</X>
-        <Y>152</Y>
+        <X>44</X>
+        <Y>166</Y>
         <FullName>Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Commands.RemovePersonFromTeam</FullName>
         <IsExpandedA>true</IsExpandedA>
         <IsExpandedB>true</IsExpandedB>
         <IsExpandedC>false</IsExpandedC>
       </ArtifactSuo>
       <ArtifactSuo>
-        <X>38</X>
-        <Y>250</Y>
+        <X>40</X>
+        <Y>377</Y>
         <FullName>Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Commands.RemoveTeamFromGroup</FullName>
         <IsExpandedA>true</IsExpandedA>
         <IsExpandedB>false</IsExpandedB>

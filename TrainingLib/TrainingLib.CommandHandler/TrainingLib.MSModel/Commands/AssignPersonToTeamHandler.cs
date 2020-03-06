@@ -8,6 +8,7 @@ using Siemens.SimaticIT.Unified;
 using Siemens.SimaticIT.SDK.Diagnostics.Tracing;
 using Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.DataModel;
 using Siemens.SimaticIT.SDK.Diagnostics.Common;
+using Siemens.Mom.Presales.Training.Training.TrainingLibView.TNModel.DataModel.ProjectionModel;
 
 namespace Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Commands
 {
@@ -30,9 +31,11 @@ namespace Siemens.Mom.Presales.Training.MasterData.TrainingLib.MSModel.Commands
 
             try
             {
-                var team =   platform.Query<ITeam>().FirstOrDefault(x => x.Name == command.TeamName);
+                //var team2 =   platform.ProjectionQuery<IvTeam>().FirstOrDefault(x => x.Name == command.TeamName);
+                //var team3 = platform.ProjectionQuery<IvTeam>().Where(x => x.Name == command.TeamName);
+                var team = platform.Query<ITeam>().FirstOrDefault(x => x.Name == command.TeamName);
 
-                if(team != null)
+                if (team != null)
                 {
                     foreach(string name in command.Persons)
                     {
